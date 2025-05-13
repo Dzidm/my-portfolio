@@ -1,0 +1,146 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #fff;
+    color: #333;
+}
+
+/* Portfolio Section */
+.portfolio {
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.portfolio-heading {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.portfolio-description {
+    font-size: 1.1rem;
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    perspective: 1000px; /* Enable 3D effect */
+}
+
+/* Portfolio Item */
+.portfolio-item {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    border-radius: 10px;
+    transform-style: preserve-3d; /* Enable 3D space */
+    transition: transform 0.5s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    cursor: pointer;
+}
+
+/* Flip Effect */
+.portfolio-item:hover {
+    transform: rotateY(180deg); /* Flip the entire card */
+}
+
+/* Flip Card Faces */
+.portfolio-item .flip-card-front,
+.portfolio-item .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide the opposite side */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+/* Front Side - Yellow */
+.portfolio-item .flip-card-front {
+    background: white; /* Yellow background */
+    color: #000000;
+    font-size: 1.5rem;
+    display: flex;
+    border: solid, #ffdd00;
+}
+
+/* Back Side - White */
+.portfolio-item .flip-card-back {
+    background: #ffdd00; 
+    color: #333;
+    transform: rotateY(180deg); 
+    padding: 20px;
+    text-align: left;
+    font-size: 1.1rem;
+    border: 10px solid #f9a825; /* Yellow border */
+}
+
+/* Portfolio Image */
+.portfolio-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Portfolio Video */
+.portfolio-video {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Portfolio Title */
+.portfolio-title {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* Details Button */
+.portfolio-detail-btn {
+    background-color: #f9a825; /* Yellow */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.portfolio-detail-btn:hover {
+    background-color: #e68900; /* Darker yellow */
+}
+
+/* Contact Section */
+.contact-section {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #f9a825; /* Yellow */
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #e68900; /* Darker yellow */
+}

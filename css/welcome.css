@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff; /* White background */
+    color: #000000; /* Default text color */
+  }
+
+.welcome-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #ffffff, #fffbf0); /* Subtle gradient background */
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+  }
+  
+  .welcome-container::before,
+  .welcome-container::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: #ffdd00; /* Decorative yellow shapes */
+    border-radius: 50%;
+    opacity: 0.2;
+    z-index: 0;
+  }
+  
+  .welcome-container::before {
+    top: -100px;
+    left: -100px;
+    transform: rotate(45deg);
+  }
+  
+  .welcome-container::after {
+    bottom: -100px;
+    right: -100px;
+    transform: rotate(-45deg);
+  }
+  
+  .welcome-content {
+    z-index: 2;
+    text-align: center;
+    padding: 30px;
+    max-width: 700px;
+    background: #ffffff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    border: 3px solid #ffdd00; /* Subtle yellow border */
+    animation: fadeIn 1s ease-in-out; /* Add fade-in effect */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  h1 {
+    font-size: 3rem;
+    color: #ffdd00; /* Yellow for header */
+    margin-bottom: 20px;
+  }
+
+  h4 a {
+    display: flex;
+    align-self: flex-end;
+    text-decoration: none;
+  }
+  
+  .intro {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    color: #000000;
+    line-height: 1.6;
+  }
+  
+  .cv-summary h2 {
+    font-size: 1.8rem;
+    color: #ffdd00; /* Yellow for subheadings */
+    margin-bottom: 10px;
+  }
+  
+  .cv-summary ul {
+    list-style-type: square; /* Stylish list marker */
+    padding-left: 20px;
+    color: #000000;
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+  
+  .cv-summary ul li {
+    margin: 10px 0;
+  }
+  
+  .download-btn {
+    margin-top: 30px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #ffdd00;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  
+  .download-btn:hover {
+    background-color: #ffc107; /* Slightly brighter yellow */
+    transform: scale(1.1); /* Zoom effect */
+  }

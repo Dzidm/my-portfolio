@@ -1,0 +1,126 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #fff;
+    color: #333;
+}
+
+header {
+    background: #ffdd00; /* Yellow background */
+    color: #fff;         /* White text for contrast */
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    color: #000000; /* Dark text for balance */
+}
+
+p {
+    margin: 0.5rem 0;
+}
+
+#education-skills {
+    background: #fff; /* White background for clean sections */
+    padding: 2rem 0;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #ffcc00; /* Highlight headings with yellow */
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    perspective: 1000px; /* Enable 3D effect */
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    border-radius: 10px;
+    transform-style: preserve-3d; /* Enable 3D space */
+    transition: transform 0.5s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: rotateY(180deg); /* Flip the entire card */
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide the opposite side */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.card-front {
+    background: #ffcc00; /* Yellow background for front */
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.card-back {
+    background: #fff; /* White background for back */
+    color: #000000; /* Dark text for readability */
+    transform: rotateY(180deg); /* Start flipped */
+    border: 10px solid #ffcc00;
+    text-align: left; /* Align text to the left for readability */
+}
+
+.card-back ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.card-back ul li {
+    margin: 0.5rem 0;
+}
+
+footer {
+    background: #333;    /* Dark footer background */
+    color: #fff;         /* White text for footer */
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer a {
+    color: #ffcc00;      /* Yellow footer links */
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
