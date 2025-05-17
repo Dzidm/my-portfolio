@@ -1,13 +1,21 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background-color: #ffffff;
   }
+
+  .contact-image {
+  width: 100%; /* Adjust width to container */
+  max-height: 300px; /* Optional: Set a max height */
+  object-fit: cover; /* Ensure image scales properly */
+  border-radius: 12px 12px 0 0; /* Rounded corners at the top */
+  margin-bottom: 20px; /* Add spacing below the image */
+}
   
   .contact-container {
     background-color: #ffdd00;

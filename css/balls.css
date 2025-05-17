@@ -1,0 +1,121 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ball Container */
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Ball Styling */
+.ball {
+  position: absolute;
+  bottom: 0;
+  width: 15px;
+  height: 15px;
+  background-color: #ffdd00;
+  border-radius: 50%;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+/* Ball Animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-300px);
+  }
+}
+
+/* Text Container */
+.text-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+.text {
+  position: absolute;
+  font-family: Arial, sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  opacity: 0;
+  animation: fly-in-out 5s linear forwards;
+}
+
+#text-1 {
+  color: yellow;
+  animation-delay: 0s;
+  animation-name: fly-top;
+}
+
+#text-2 {
+  color: black;
+  animation-delay: 5s;
+  animation-name: fly-side;
+}
+
+#text-3 {
+  color: yellow;
+  animation-delay: 10s;
+  animation-name: stay-center;
+}
+
+/* Text Animations */
+@keyframes fly-top {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+
+@keyframes fly-side {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+@keyframes stay-center {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
