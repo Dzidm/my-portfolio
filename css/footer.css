@@ -7,6 +7,12 @@
   font-family: Arial, sans-serif;
 }
 
+.footer-line {
+  height: 1px; /* Thickness of the yellow line */
+  background-color: yellow; /* Line color */
+  margin-bottom: 10px; /* Space between the line and the footer content */
+}
+
 .footer-container {
   display: flex;
   padding: 0 50px 0 50px;
@@ -18,6 +24,7 @@
 .footer-about h2 {
   font-size: 1.5rem;
   text-align: justify; /* Ensure headings are justified if needed */
+  color: #4b4206;
 }
 
 .footer-skills h3,
