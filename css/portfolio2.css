@@ -26,6 +26,15 @@ p{
     max-width: 1200px;
     margin: auto;
 }
+.container-flex {
+    display: flex;
+    justify-content: center;
+}
+
+/* .easy-links {
+    display: flex;
+    gap: 2rem;
+} */
 
 h1 {
     font-size: 2.5rem;
@@ -54,7 +63,9 @@ h2 {
     justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
+    align-items: flex-start;
     perspective: 1000px; /* Enable 3D effect */
+
 }
 
 .card {
@@ -62,11 +73,13 @@ h2 {
     width: 300px;
     height: 300px;
     text-align: center;
+    align-items: centers;
     border-radius: 10px;
     transform-style: preserve-3d; /* Enable 3D space */
     transition: transform 0.5s;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     cursor: pointer;
+    margin-bottom: 2rem;
 }
 
 .card:hover {
