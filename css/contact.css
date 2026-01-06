@@ -1,82 +1,174 @@
+/* Base Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #ffffff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+.contact-container {
+  background-color: #ffdd00;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 700px;
+  width: 90%;
+}
+
+.contact-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+p {
+  color: #000000;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+label {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #000000;
+}
+
+input, textarea {
+  margin-top: 5px;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+textarea {
+  padding: 30px; /* reduce padding for mobile */
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  flex-wrap: wrap; /* allow buttons to stack on small screens */
+  gap: 10px;
+}
+
+.send-btn {
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #000000;
+  border: solid;
+  width: fit-content;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.send-btn:hover {
+  background-color: #555555;
+}
+
+.back-btn {
+  gap: 8px; /* space between arrow and text */
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.back-btn:hover {
+  transform: translateX(-4px); /* subtle “back” motion */
+}
+
+/* ===================== MEDIA QUERIES ===================== */
+
+/* Tablets: <= 768px */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 30px;
   }
 
-  .contact-image {
-  width: 100%; /* Adjust width to container */
-  max-height: 300px; /* Optional: Set a max height */
-  object-fit: cover; /* Ensure image scales properly */
-  border-radius: 12px 12px 0 0; /* Rounded corners at the top */
-  margin-bottom: 20px; /* Add spacing below the image */
-}
-  
-  .contact-container {
-    background-color: #ffdd00;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 700px;
-    width: 90%;
-  }
-  
   h1 {
-    color: #ffffff;
-    margin-bottom: 10px;
-    text-align: center;
+    font-size: 1.8rem;
   }
-  
+
   p {
-    color: #000000;
-    margin-bottom: 20px;
-    font-size: 1.5rem;
-    text-align: center;
+    font-size: 1.2rem;
   }
-  
+
   form {
-    display: flex;
-    flex-direction: column;
-    margin: 20px;
+    margin: 10px;
   }
-  
-  label {
-    margin-top: 10px;
-    font-size: 1rem;
-    color: #000000;
-  }
-  
+
   input, textarea {
-    margin-top: 5px;
-    padding: 10px;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   textarea {
-    padding: 50px;
+    padding: 20px;
   }
-  
-  button {
-    margin-top: 20px;
-    padding: 15px 30px;
+
+  .send-btn {
+    padding: 12px 25px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile: <= 480px */
+@media screen and (max-width: 480px) {
+  body {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
     font-size: 1rem;
-    color: #ffffff;
-    background-color: #000000;
-    border: solid;
-    width: fit-content;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
   }
-  
-  button:hover {
-    background-color: #555555;
+
+  form {
+    margin: 5px;
   }
-  
+
+  input, textarea {
+    font-size: 0.9rem;
+  }
+
+  textarea {
+    padding: 15px;
+  }
+
+  .form-actions {
+    flex-direction: column; /* stack buttons vertically */
+    align-items: stretch;
+  }
+
+  .send-btn, .back-btn {
+    width: 100%; /* full-width buttons on mobile */
+    text-align: center;
+  }
+}

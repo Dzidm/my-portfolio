@@ -7,7 +7,7 @@
   <title>Contact Me</title>
 </head>
 
-<body>
+<body>  
   <div class="contact-container">
     <img src="./images/contact.png" alt="Contact Me" class="contact-image" />
     <h1>Contact Me</h1>
@@ -25,7 +25,10 @@
         <label for="message">Message:</label>
         <textarea id="message" name="message" required></textarea>
      
-        <button type="submit">Send Message</button>
+        <div class="form-actions">
+          <button type="submit" class="send-btn">Send Message</button>
+          <a href="landing.html" class="back-btn">  ← Back to Home </a>
+        </div>
      </form>
      
      <div id="successMessage" style="display: none; color: green;">Message sent successfully!</div>

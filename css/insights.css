@@ -58,6 +58,12 @@ p {
   margin-bottom: 20px;
 }
 
+.article-nav {
+  display: flex;
+  justify-content: space-between; /* Previous left, Next right */
+  flex-wrap: wrap; /* keeps it responsive on small screens */
+}
+
 .explore-more-link {
   display: inline-block;
   margin-top: 20px;
@@ -74,6 +80,19 @@ p {
   background-color: #000000;
   color: #ffdd00;
 }
+
+.back-btn {
+  margin-top: 30px;
+  gap: 8px; /* space between arrow and text */
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.back-btn:hover {
+  transform: translateX(-4px); /* subtle “back” motion */
+}
+
 
 
 @media (max-width: 768px) {
