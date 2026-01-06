@@ -6,75 +6,65 @@ body {
   color: #000000; /* Default text color */
 }
 
+/* --- Hero Section Base --- */
 .hero {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color: #ffdd00; /* Yellow background for hero */
+  min-height: 100vh;
+  background-color: #ffdd00;
   text-align: center;
-  overflow: hidden;
+  padding: 20px; /* Add padding for small screens */
 }
 
 .hero-container {
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  align-items: center; /* Center items horizontally */
-  justify-content: center; /* Center items vertically */
-  gap: 15px; /* Space between the image and text */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  max-width: 1000px; /* Limit width */
 }
 
+/* Hero Image */
 .hero-image img {
-  display: flex;
-  width: 220px; /* Adjust size */
-  height: 220px; /* Adjust size */
-  border-radius: 50%; /* Make image round */
-  object-fit: cover; /* Focus on the face */
-  border: 5px solid #ffffff; /* White border */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-  transition: transform 0.3s ease; /* Smooth hover effect */
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
 }
 
 .hero-image img:hover {
-  transform: scale(1.1); /* Slight zoom on hover */
+  transform: scale(1.1);
 }
 
+/* Hero Text */
 .hero-text h1 {
   font-size: 2.5rem;
-  margin: 0;
-  color: #ffffff; /* White text */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow effect */
+  margin: 10px 0 0 0;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-text .cascading-text {
   font-size: 2rem;
   font-weight: bold;
-  border: solid;
   padding: 20px;
-  color: #ffffff; /* Black text */
-  animation: fadeInOut 3s infinite; /* Fading animation */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow effect */
-
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: fadeInOut 3s infinite;
 }
 
-/* Fading Text Animation */
-@keyframes fadeInOut {
-  0%, 100% {
-    opacity: 0; /* Fully transparent */
-    transform: scale(0.9); /* Slightly smaller */
-  }
-  50% {
-    opacity: 1; /* Fully visible */
-    transform: scale(1); /* Normal size */
-  }
-}
-
-/* Button Styles */
+/* Buttons */
 .hero-buttons {
-  margin-top: 20px;
   display: flex;
   justify-content: center;
-  gap: 20px; /* Space between buttons */
+  flex-wrap: wrap; /* Let buttons wrap naturally */
+  gap: 15px;
+  margin-top: 20px;
 }
 
 .btn {
@@ -89,28 +79,74 @@ body {
 }
 
 .welcome-btn {
-  background-color: #ffffff; /* White background */
-  color: #ffdd00; /* Yellow text */
-  border: 2px solid #ffdd00; /* Yellow border */
+  background-color: #ffffff;
+  color: #ffdd00;
+  border: 2px solid #ffdd00;
 }
 
 .welcome-btn:hover {
-  background-color: #ffdd00; /* Yellow background on hover */
-  color: #ffffff; /* White text on hover */
-  transform: scale(1.1); /* Slight zoom on hover */
+  background-color: #ffdd00;
+  color: #ffffff;
+  transform: scale(1.05);
 }
 
 .portfolio-btn {
-  background-color: #ffdd00; /* Yellow background */
-  color: #ffffff; /* White text */
-  border: 4px solid #ffffff; /* White border */
+  background-color: #ffdd00;
+  color: #ffffff;
+  border: 4px solid #ffffff;
 }
 
 .portfolio-btn:hover {
-  background-color: #ffffff; /* White background on hover */
-  color: #ffdd00; /* Yellow text on hover */
-  transform: scale(1.1); /* Slight zoom on hover */
+  background-color: #ffffff;
+  color: #ffdd00;
+  transform: scale(1.05);
 }
 
+/* --- Responsive Media Queries --- */
+@media (max-width: 900px) {
+  .hero-image img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text .cascading-text {
+    font-size: 1.5rem;
+    padding: 15px;
+  }
+
+  .btn {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-image img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-text .cascading-text {
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+
+  .hero-buttons {
+    gap: 12px;
+  }
+
+  .btn {
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+}
 
 
